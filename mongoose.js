@@ -9,6 +9,18 @@ mongoose.connect(`mongodb://${env.HOST}/${env.DATABASE}`)
 const userSchema = new mongoose.Schema({
     username:String,
     password:String,
+    description:{
+        type:String,
+        default:"Insert description here bruh"
+    },
+    profile:{
+        type:Boolean,
+        default:false
+    },
+    coolpown:{
+        type:Boolean,
+        default:false
+    },
     banned:{
         type:Boolean,
         default:false
@@ -26,6 +38,9 @@ const userSchema = new mongoose.Schema({
 postSchema = new mongoose.Schema({
     _id:Number,
     title:String,
+    username:String,
+    isImage:Boolean,
+    category:Array,
     rill:{
         type:Number,
         default:0
@@ -36,10 +51,20 @@ postSchema = new mongoose.Schema({
     }
 }, { minimize:false, _id:false }),
 
+categorySchema = new mongoose.Schema({
+    name:String,
+    total:{
+        type:Number,
+        default:1
+    }
+}),
+
 User = mongoose.model("users", userSchema),
-Post = mongoose.model("posts", postSchema);
+Post = mongoose.model("posts", postSchema),
+Category = mongoose.model("categories", categorySchema);
 
 module.exports = {
     User:User,
-    Post:Post
+    Post:Post,
+    Category:Category
 };
