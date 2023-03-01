@@ -1,46 +1,8 @@
+import Sidebar from "./Sidebar";
+
 const User = () =>
 <div className="grid" style={{ gridTemplateColumns:"17.5% 70%" }}>
-    <div className="p-10 bg-[#101010]">
-        <div className="h-screen fixed">
-            <div className="text-[30px] font-bold">
-                <i className="fa fa-home"/>&ensp;Aseli
-            </div>
-            <div className="mt-2 text-xs">Overview</div>
-            <div>
-                <div className="pt-4 cursor-pointer">
-                    <i className="fa fa-home"/>
-                    <span className="text-sm">&emsp;&emsp;Home</span>
-                </div>
-                <div className="pt-4 cursor-pointer">
-                    <i className="fa fa-star"/>
-                    <span className="text-sm">&emsp;&emsp;Popular</span>
-                </div>
-                <div className="pt-4 cursor-pointer">
-                    <i className="fa fa-history"/>
-                    <span className="text-sm">&emsp;&emsp;Recent</span>
-                </div>
-                <div className="pt-4 cursor-pointer">
-                    <i className="fa fa-bookmark"/>
-                    <span className="text-sm">&emsp;&emsp;&nbsp;Saved</span>
-                </div>
-                <div className="pt-4 cursor-pointer">
-                    <i className="fa fa-search"/>
-                    <span className="text-sm">&emsp;&emsp;Search</span>
-                </div>
-            </div>
-            <div className="absolute bottom-0 pb-20">
-                <div className="mt-2 text-xs">Account</div>
-                <div className="pt-3 cursor-pointer">
-                    <i className="fa fa-user"/>
-                    <span className="text-sm">&emsp;&emsp;Profile</span>
-                </div>
-                <div className="pt-4 cursor-pointer">
-                    <i class="fa fa-right-from-bracket"/>
-                    <span className="text-sm">&emsp;&emsp;Log out</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Sidebar/>
     <div>
         <div className="w-full h-28 overflow-hidden">
             <img className="w-full" alt="Header" src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80"/>
